@@ -1,0 +1,39 @@
+{
+  "name": "back-end-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sahilchoudhary20/Back-end-Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sahilchoudhary20/Back-end-Application/issues"
+  },
+  "homepage": "https://github.com/Sahilchoudhary20/Back-end-Application#readme",
+  "devDependencies": {
+    "@types/node": "^24.10.2",
+    "eslint": "^9.39.1",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.7.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^8.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "firebase": "^12.6.0",
+    "firebase-admin": "^13.6.0",
+    "helmet": "^8.1.0",
+    "joi": "^18.0.2",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
