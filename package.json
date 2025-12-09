@@ -1,39 +1,40 @@
 {
-  "name": "back-end-application",
+  "name": "capstone-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sahilchoudhary20/Back-end-Application.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Sahilchoudhary20/Back-end-Application/issues"
-  },
-  "homepage": "https://github.com/Sahilchoudhary20/Back-end-Application#readme",
-  "devDependencies": {
-    "@types/node": "^24.10.2",
-    "eslint": "^9.39.1",
-    "nodemon": "^3.1.11",
-    "prettier": "^3.7.4",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "dev": "nodemon --watch src -x ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest --coverage --runInBand",
+    "lint": "eslint 'src/**/*.ts'",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "@google-cloud/firestore": "^8.0.0",
+    "@google-cloud/firestore": "^6.5.0",
     "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
-    "express": "^5.2.1",
-    "firebase": "^12.6.0",
-    "firebase-admin": "^13.6.0",
-    "helmet": "^8.1.0",
-    "joi": "^18.0.2",
-    "swagger-ui-express": "^5.0.1"
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.10.0",
+    "helmet": "^6.0.0",
+    "joi": "^17.10.0",
+    "swagger-ui-express": "^4.6.3",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "@types/supertest": "^2.0.12",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "supertest": "^6.4.2",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
   }
 }
