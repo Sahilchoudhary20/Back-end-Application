@@ -14,7 +14,7 @@ export async function firebaseAuth(req: AuthRequest, res: Response, next: NextFu
 
     if (!admin.apps.length) {
      
-      return res.status(500).json({ message: 'Firebase not initialized on server (check service account)' });
+      return res.status(500).json({ message: 'Firebase not initialized' });
     }
 
    
