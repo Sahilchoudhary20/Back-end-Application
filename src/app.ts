@@ -2,7 +2,6 @@ import express from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
-
 import routes from './routes';
 import { errorHandler } from './middleware/error.middleware';
 import { swaggerRouter } from './docs/swagger';
