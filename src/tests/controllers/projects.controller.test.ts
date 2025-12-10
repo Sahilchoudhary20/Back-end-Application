@@ -1,6 +1,6 @@
 jest.mock('../../config/firebase', () => {
   return {
-    auth: { verifyIdToken: jest.fn() }, // adapt as needed
+    auth: { verifyIdToken: jest.fn() },
     firestore: {
       collection: jest.fn(() => ({
         add: jest.fn(),
