@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import admin, { auth } from '../config/firebase';
+import admin from '../config/firebase';
 
 export interface AuthRequest extends Request {
   uid?: string;
@@ -12,9 +12,13 @@ export async function firebaseAuth(req: AuthRequest, res: Response, next: NextFu
     const token = header.startsWith('Bearer ') ? header.split(' ')[1] : null;
     if (!token) return res.status(401).json({ message: 'Unauthorized' });
 
-    if (!admin.apps.length) return res.status(500).json({ message: 'Firebase not initialized on server' });
+    if (!admin.apps.length) {
+     
+      return res.status(500).json({ message: 'Firebase not initialized on server (check service account)' });
+    }
 
-    const decoded = await auth.verifyIdToken(token);
+   
+    const decoded = await admin.auth().verifyIdToken(token);
     req.uid = decoded.uid;
     req.claims = decoded;
     return next();
